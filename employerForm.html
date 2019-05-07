@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Employer Registration</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-3.4.1.js"></script>
+    <!--  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="formReg.css">
+    <script src="formValidationEmployer.js"></script>
+    <!-- Validation library -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.1/parsley.min.js"></script> -->
+</head>
+
+<body>
+    <!-- Form title -->
+    <div class="modal-content col-md-8">
+        <div class="modal-header">
+            <h4>Employer Registration</h4>
+        </div>
+        <div class="modal-body">
+            Nova Scotia Community College values your privacy and will only ask for information that we need.
+            Nova Scotia Community College will not distribute your contact information outside of the institution
+            without your permission. <br>
+
+            <i><strong>If you want to update your information, please contact with administration <a
+                        href="mailto: abc@example.com">admin@nscc.ca</a>.</strong></i>
+        </div>
+
+        <!-- Form  -->
+        <form name="employerForm" method="post" action="" onsubmit="return validateform()" id="employerForm"
+            data-parsley-validate="">
+            <!-- Company information -->
+            <div class="card bg-light employerForm">
+                <div class="card-header">
+                    <h5 class="card-title">Company Information(<span class="req"><small> required
+                                <span class="star">*</span></small></span>)</h5>
+                </div>
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label for="companyName">Company Name <span class="star">*</span></label>
+                        <input type="text" class="form-control" id="companyName" name="companyName" placeholder="">
+                        <small id="nameHelp" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyEmail">Email address <span class="star">*</span></label>
+                        <input type="text" class="form-control" id="companyEmail" name="companyEmail" placeholder="">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyPhone">Phone Number <span class="star">*</span></label>
+                        <input type="text" class="form-control" id="companyPhone" name="companyPhone"
+                            placeholder="eg. 902-xxx-xxxx">
+                        <small id="phoneHelp" class="form-text text-muted"><i></i></small>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyURL">Company Website URL</label>
+                        <input type="text" class="form-control" id="companyURL" name="companyURL" placeholder="">
+                        <small id="urlHelp" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyAddress">Address <span class="star">*</span></label>
+                        <input type="text" class="form-control" id="companyAddress" name="companyAddress"
+                            placeholder="">
+                        <small id="addressHelp" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="companyCity">City <span class="star">*</span></label>
+                            <input type="text" class="form-control" id="companyCity" name="companyCity"
+                                placeholder="Halifax">
+                            <small id="cityHelp" class="form-text text-muted"></small>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="companyProvince">Province <span class="star">*</span></label>
+                            <select id="companyProvince" name="companyProvince" class="form-control">
+                                <option>AB</option>
+                                <option>BC</option>
+                                <option>MB</option>
+                                <option>NB</option>
+                                <option>NL</option>
+                                <option>NT</option>
+                                <option selected>NS</option>
+                                <option>NU</option>
+                                <option>ON</option>
+                                <option>PE</option>
+                                <option>QC</option>
+                                <option>SK</option>
+                                <option>YT</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="companyZip">Zip <span class="star">*</span></label>
+                            <input type="text" class="form-control" id="companyZip" name="companyZip"
+                                placeholder="B3H 1E2">
+                            <small id="zipHelp" class="form-text text-muted"></small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Recruit Information -->
+            <div class="card bg-light employerForm">
+                <div class="card-header">
+                    <h5 class="card-title">Recruit Information</h5>
+                </div>
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label for="position">What is position you want to provide? <span class="star">*</span></label>
+                        <input type="text" class="form-control" id="position" name="position" placeholder="">
+                        <small id="positionHelp" class="form-text text-muted"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobTypeOptions">What is the job type? <span class="star">*</span></label><br>
+                        <div class="form-check form-check-inline"">
+                            <input class=" form-check-input" type="checkbox" name="jobTypeOptions" id="jobTypeFullTime"
+                            value="option1">
+                            <label class="form-check-label" for="jobTypeFullTime">Full-time</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="jobTypeOptions" id="jobTypePartTime"
+                                value="option2">
+                            <label class="form-check-label" for="jobTypePartTime">Part-time</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="jobTypeOptions" id="jobTypeCoop"
+                                value="option2">
+                            <label class="form-check-label" for="jobTypeCoop">Coop</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="jobTypeOptions" id="jobTypePermanent"
+                                value="option2">
+                            <label class="form-check-label" for="jobTypePermanent">Permanent</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="jobTypeOptions" id="jobTypeContract"
+                                value="option2">
+                            <label class="form-check-label" for="jobTypeContract">Contract</label>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="positionYearOptions">Which year student you prefer? <span
+                                class="star">*</span></label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="positionYearOptions"
+                                id="positionYearOptionsFirst" value="option1">
+                            <label class="form-check-label" for="positionYearOptionsFirst">First year</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="positionYearOptions"
+                                id="positionYearOptionsSecond" value="option2">
+                            <label class="form-check-label" for="positionYearOptionsSecond">Second year</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="positionYearOptions"
+                                id="positionYearOptionsBoth" value="option2">
+                            <label class="form-check-label" for="positionYearOptionsBoth">Both</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="positionPaidOptions">Would you like to pay for this job? <span
+                                class="star">*</span></label>
+                        <div class="form-check ">
+                            <input class="form-check-input" type="radio" name="positionPaidOptions" id="positionPaidYes"
+                                value="option1">
+                            <label class="form-check-label" for="positionPaidYes">Yes, it's a paid positon.</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="positionPaidOptions" id="positionPaidNo"
+                                value="option2">
+                            <label class="form-check-label" for="positionPaidNo">No, it's a postion without
+                                paid.</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="positionDescription">Would you like to give a description for this postion?</label>
+                        <textarea class="form-control" id="positionDescription" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <!-- Make a presatation -->
+            <div class="card bg-light employerForm">
+                <div class="card-header">
+                    <h5 class="card-title">Make a presatation</h5>
+                </div>
+                <div class="card-body">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="presatation" name="presatation">
+                        <label class="form-check-label" for="presatation">
+                            Would you like to give a presatation in Job Fair?
+                        </label>
+                    </div>
+                    <div id="hidePresatationInfo">
+                        <div class="form-row">
+                            <label for="colFormLabelSm" class="col-md-12 col-form-label col-form-label-md">What time do
+                                you prefer to start a presatation? <span class="star">*</span></label>
+                            <div class="form-group col-md-2">
+                                <br><label for="presatationDate" class="col-form-label-sm">Option1: <span
+                                        class="star">*</span></label>
+
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="presatationDate" class="col-form-label-sm">Date <span
+                                        class="star">*</span></label>
+
+                                <input type="date" class="form-control form-control-md" id="presatationDate1"
+                                    name="presatationDate1" placeholder="">
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="presatationHour1" class="col-form-label-sm">Hour <span
+                                        class="star">*</span></label>
+                                <select id="presatationHour1" name="presatationHour1" class="form-control">
+
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="presatationMin1" class="col-form-label-sm">Minute <span
+                                        class="star">*</span></label>
+                                <select id="presatationMin1" name="presatationMin1" class="form-control">
+
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="presatationAMPM1" class="col-form-label-sm">AM/PM <span
+                                        class="star">*</span></label>
+                                <select id="presatationAMPM1" name="presatationAMPM1" class="form-control">
+                                    <option selected>AM</option>
+                                    <option>PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Time option2 -->
+                        <div class="form-row">
+
+                            <div class="form-group col-md-2">
+                                <br><label for="presatationDate2" class="col-form-label-sm">Option2: <span
+                                        class="star">*</span></label>
+
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="presatationDate2" class="col-form-label-sm">Date <span
+                                        class="star">*</span></label>
+
+                                <input type="date" class="form-control form-control-md" id="presatationDate2"
+                                    name="presatationDate2" placeholder="">
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="presatationHour2" class="col-form-label-sm">Hour <span
+                                        class="star">*</span></label>
+                                <select id="presatationHour2" name="presatationHour2" class="form-control">
+
+                                </select>
+                            </div>
+
+                            <div class="form-group col-md-2">
+                                <label for="presatationMin2" class="col-form-label-sm">Minute <span
+                                        class="star">*</span></label>
+                                <select id="presatationMin2" name="presatationMin2" class="form-control">
+
+                                </select>
+                            </div>
+                            <div class="form-group col-md-2">
+                                <label for="presatationAMPM2" class="col-form-label-sm">AM/PM <span
+                                        class="star">*</span></label>
+                                <select id="presatationAMPM2" name="presatationAMPM2" class="form-control">
+                                    <option selected>AM</option>
+                                    <option>PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="presatationDuringHour">How long does your presentation take?</label>
+                            <select class="custom-select col-md-3" id="presatationDuringHour"
+                                name="presatationDuringHour">
+                                <option selected>Choose</option>
+                                <option value="1">30 Minute</option>
+                                <option value="2">60 Minute</option>
+                                <option value="3">90 Minute</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="presatationTopic">What is the topic do you bring in Job Fair?</label>
+                            <textarea class="form-control" id="presatationTopic" name="presatationTopic"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="agreeCheckBox" name="agreeCheckBox">
+                <label class="form-check-label" for="agreeCheckBox">
+                    I agree with the <span class="termCondition"><a href="">terms and
+                            conditions</a></span> for Registration. <span class="star">*</span>
+                </label>
+            </div>
+            <div class="submitButton">
+                <button type="submit" class="btn btn-primary mb-2" id="submit">Submit
+                    Registration</button>
+
+            </div>
+    </div>
+    <!-- </fieldset> -->
+
+    <!-- <button type="submit" class="btn btn-primary btn-block">Create your account</button> -->
+    <!-- </fieldset> -->
+    </form>
+
+    </div>
+
+
+    <!-- </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
