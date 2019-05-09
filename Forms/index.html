@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Student Registration Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="formReg.css">
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="formValidationStudent.js"></script>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <!-- Form  -->
+    <div class="modal-content col-md-8">
+        <div class="modal-header">
+            <h4><strong>Student Registration</strong></h4>
+        </div>
+        <div class="modal-body ">
+            <p>NSCC students who plan to attend the IT Campus Job Fair on Wednesday, March 6th are required to complete
+            this online form to register for the event.
+
+            Deadline to register is end of day Tuesday, February 26, 2020. <br>
+
+            <i class="updateContact"><strong>We will send all event details through your school email. If you want to
+                    update your information, please contact with administration.<a
+                        href="mailto: abc@example.com">admin@nscc.ca</a></strong></i></p>
+        </div>
+
+
+        <div class="card bg-light employerForm">
+            <div class="card-header">
+                <h5 class="card-title">Registration Form(<span class="req"><small> required
+                            <span class="star">*</span></small></span>)</h3>
+            </div>
+            <div class="card-body">
+
+                <form name="studentForm" method="post" action="" onsubmit="return validateform()">
+
+                    <!-- <fieldset> -->
+                    <!-- <legend class="text-center">Registration for Student (<span class="req"><small> required
+                                        <span class="star">*</span></small></span>)</legend> -->
+
+                    <div class="form-group form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">First Name <span class="star">*</span></label>
+                            <input type="name" class="form-control" id="firstName" name="firstName"
+                                placeholder="First Name">
+                            <small id="firstNameHelp" class="form-text text-muted"></small>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Last Name <span class="star">*</span></label>
+                            <input type="name" class="form-control" id="lastName" name="lastName"
+                                placeholder="Last Name">
+                            <small id="lastNameHelp" class="form-text text-muted"></small>
+
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="studentID">Student ID <span class="star">*</span> (ie: w0123456)</label>
+                        <input type="name" class="form-control" id="studentID" placeholder="Eg. w0410000">
+                        <small id="studentIDHelp" class="form-text text-muted"></small>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="studentEmail">Email Address <span class="star">*</span></label>
+                        <input type="email" class="form-control" id="studentEmail" name="studentEmail"
+                            placeholder="Email">
+                        <small id="studentEmailHelp" class="form-text text-muted"></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="campus">At which campus do you study? <span class="star">*</span></label>
+                        <select class="form-control" id="campus" name="campus">
+                            <option>Annapolis Valley Campus</option>
+                            <option>Burridge Campus</option>
+                            <option>Institute of Technology Campus</option>
+                            <option>Marconi Campus</option>
+                            <option>Truro Campus</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ITProgram">What is your program and year of study? <span
+                                class="star">*</span></label>
+                        <select class="form-control" id="ITProgram" name="ITProgram">
+                            <option>Cyber Security</option>
+                            <option>IT Data Analytics</option>
+                            <option>IT Database Administration</option>
+                            <option>IT Generalist</option>
+                            <option>IT Systems Management & Security</option>
+                            <option>IT Web Development</option>
+                            <option>Business Intelligence Analytics</option>
+                            <option>Computer Electronics Technician - Year 2</option>
+                            <option>IT Programming</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="graduateYear">Which year do you graduate? <span class="star">*</span></label>
+                        <select class="form-control" id="graduateYear" name="graduateYear">
+
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="personalPhoto">Upload Personal Photo</label>
+                        <input type="file" class="form-control-file" id="resume" name="resume">
+                    </div>
+                    <div class="form-group">
+                        <label for="presentationPhoto">Portfolio</label>
+                        <input type="file" class="form-control-file" id="resume" name="resume">
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            I consent that the photographs, video or audio taken of me by the photographer or
+                            videographer
+                            representing NSCC may by used by NSCC in all materials related to the marketing and
+                            communications
+                            of NSCC programs and services. The photographs may be used in all forms of
+                            communications, including
+                            but not limited to brochures, fundraising materials, displays, as well as social,
+                            digital and
+                            mainstream media relating to the promotion of NSCC and the NSCC Foundation.
+                        </label>
+                    </div>
+                    <div class="submitButton">
+                        <button type="submit" class="btn btn-primary mb-2" id="submit">Submit Registration</button>
+                        <!-- <button type="submit" class="btn btn-primary btn-block">Register</button> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div><a href="employerForm.html">EmployerForm</a></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

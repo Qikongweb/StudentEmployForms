@@ -122,9 +122,28 @@
 
                     <div class="form-group">
                         <label for="position">What is position you want to provide? <span class="star">*</span></label>
-                        <input type="text" class="form-control" id="position" name="position" placeholder="">
-                        <small id="positionHelp" class="form-text text-muted"></small>
+                        <!-- <input type="text" class="form-control" id="position" name="position" placeholder="">
+                        <small id="positionHelp" class="form-text text-muted"></small> -->
+                        <div class="input-group control-group after-add-more">
+                            <input type="text" name="positionAddMore" class="form-control" placeholder="Enter a Position Here">
+                            <div class="input-group-btn">
+                                <button class="btn btn-success add-more" type="button"><i
+                                        class="glyphicon glyphicon-plus"></i> Add</button>
+                            </div>
+                        </div>
+                        <div class="copy-fields d-none">
+                            <div class="control-group input-group" style="margin-top:10px">
+    
+                                <input type="text" name="positionAddMore" class="form-control" placeholder="Enter a Position Here">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-danger remove" type="button"><i
+                                            class="glyphicon glyphicon-remove"></i> Remove</button>
+                                </div>
+    
+                            </div>
+                        </div>
                     </div>
+                    
 
                     <div class="form-group">
                         <label for="jobTypeOptions">What is the job type? <span class="star">*</span></label><br>
@@ -193,7 +212,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="positionDescription">Would you like to give a description for this postion?</label>
+                        <label for="positionDescription">Would you like to give a description for this postion? <span
+                            class="star">*</span></label>
                         <textarea class="form-control" id="positionDescription" rows="3"></textarea>
                     </div>
                 </div>
@@ -255,36 +275,31 @@
                         <div class="form-row">
 
                             <div class="form-group col-md-2">
-                                <br><label for="presatationDate2" class="col-form-label-sm">Option2: <span
-                                        class="star">*</span></label>
+                                <br><label for="presatationDate2" class="col-form-label-sm">Option2: </label>
 
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="presatationDate2" class="col-form-label-sm">Date <span
-                                        class="star">*</span></label>
+                                <label for="presatationDate2" class="col-form-label-sm">Date </label>
 
                                 <input type="date" class="form-control form-control-md" id="presatationDate2"
                                     name="presatationDate2" placeholder="">
                             </div>
 
                             <div class="form-group col-md-2">
-                                <label for="presatationHour2" class="col-form-label-sm">Hour <span
-                                        class="star">*</span></label>
+                                <label for="presatationHour2" class="col-form-label-sm">Hour </label>
                                 <select id="presatationHour2" name="presatationHour2" class="form-control">
 
                                 </select>
                             </div>
 
                             <div class="form-group col-md-2">
-                                <label for="presatationMin2" class="col-form-label-sm">Minute <span
-                                        class="star">*</span></label>
+                                <label for="presatationMin2" class="col-form-label-sm">Minute </label>
                                 <select id="presatationMin2" name="presatationMin2" class="form-control">
 
                                 </select>
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="presatationAMPM2" class="col-form-label-sm">AM/PM <span
-                                        class="star">*</span></label>
+                                <label for="presatationAMPM2" class="col-form-label-sm">AM/PM </label>
                                 <select id="presatationAMPM2" name="presatationAMPM2" class="form-control">
                                     <option selected>AM</option>
                                     <option>PM</option>
@@ -293,7 +308,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="presatationDuringHour">How long does your presentation take?</label>
+                            <label for="presatationDuringHour">How long does your presentation take? <span
+                                class="star">*</span></label>
                             <select class="custom-select col-md-3" id="presatationDuringHour"
                                 name="presatationDuringHour">
                                 <option selected>Choose</option>
@@ -303,7 +319,8 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="presatationTopic">What is the topic do you bring in Job Fair?</label>
+                            <label for="presatationTopic">What is the topic do you bring in Job Fair? <span
+                                class="star">*</span></label>
                             <textarea class="form-control" id="presatationTopic" name="presatationTopic"
                                 rows="3"></textarea>
                         </div>

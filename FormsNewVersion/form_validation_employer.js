@@ -132,35 +132,34 @@ $(document).ready(function () {
         zipValidation()
     })
 
-    
+
     for (var i=1; i <= 12; i++){
         $("#presatationHour1,#presatationHour2").append(`<option value="${i}">${i}</option>`);
     }
 
-    for (var i=10; i <= 50; i+=10){
-        $("#presatationMin1,#presatationMin2").append(`<option value="${i}">${i}</option>`);
+    for (var i=0; i <= 50; i+=10){
+        let min = i==0 ? "00" : i;
+        $("#presatationMin1,#presatationMin2").append(`<option value="${min}">${min}</option>`);
+        i += 0;
     }
 
     $("#presatation").on('change',function(){
         if($("#presatation").is(":checked")){
-                $("#hidePresatationInfo").css('display','block');
-            }
-            else{
-                $("#hidePresatationInfo").css('display','none');
-            }
+            $("#hidePresatationInfo").css('display','block');
+        }
+        else{
+            $("#hidePresatationInfo").css('display','none');
+        }
     })
 
     //here first get the contents of the div with name class copy-fields and add it to after "after-add-more" div class.
-    $(".add-more").click(function(){ 
+    $(".add-more").click(function(){
         var html = $(".copy-fields").html();
         $(".after-add-more").after(html);
     });
-  //here it will remove the current value of the remove button which has been pressed
-    $("body").on("click",".remove",function(){ 
+    //here it will remove the current value of the remove button which has been pressed
+    $("body").on("click",".remove",function(){
         $(this).parents(".control-group").remove();
     });
-
-  
-    
 
 });
