@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.css">
+    <link href="../../stylesheets/carousel.css" rel="stylesheet">
+    <link href="../../stylesheets/styles.css" rel="stylesheet">
+
+    <title>NSCC Job Fair Website - feedbackform</title>
+
+    <style>
+        .feedbackform {
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0;
+        }
+
+        table {
+            border: 1px;
+        }
+
+        .star {
+            color: red;
+        }
+
+        /* .wrapper {
+                padding: 20px;
+                margin: 100px auto;
+                width: 400px;
+                min-height: 200px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0,0,0,.1);
+                background-color: #fff;
+            } */
+        .rating {
+            overflow: hidden;
+            vertical-align: bottom;
+            display: inline-block;
+            width: auto;
+            height: 40px;
+        }
+
+        .rating>input {
+            opacity: 0;
+            margin-right: -100%;
+        }
+
+        .rating>label {
+            position: relative;
+            display: block;
+            float: right;
+            background: url('star-off-big.png');
+            background-size: 40px 40px;
+        }
+
+        .rating>label:before {
+            display: block;
+            opacity: 0;
+            content: '';
+            width: 40px;
+            height: 40px;
+            background: url('star-on-big.png');
+            background-size: 40px 40px;
+            transition: opacity 0.2s linear;
+        }
+
+        .rating>label:hover:before,
+        .rating>label:hover~label:before,
+        .rating:not(:hover)> :checked~label:before {
+            opacity: 1;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main role="main">
+        <div class="card feedbackform mb-5 col-md-8">
+            <div class="card-header">
+                <h5 class="card-title">Feedback (<span class="req"><small> required
+                            <span class="star">*</span></small></span>)</h5>
+            </div>
+            <div class="card-body">
+                <form name="feedbackform" method="post" action="" id="feedbackform" data-parsley-validate="">
+                    <div class="form-group">
+
+                        <label for="companyName" class="form-inline">
+                            <strong><span class="col-md-6">Name:</strong></span>
+                            <input type="text" class="form-control col-md-6" id="companyName" name="companyName"
+                                placeholder="">
+                        </label>
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="th-lg"><span class="star">*</span> Please indicate your level of
+                                            agreement with the following statements.</th>
+                                        <th class="th-lg"></th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <!-- <th scope="row">1</th> -->
+                                        <td>Food is very delicious.</td>
+                                        <td>
+                                            <div class="wrapper">
+                                                <span class="rating">
+                                                    <input id="rating15" type="radio" name="rating1" value="5">
+                                                    <label for="rating15">5</label>
+                                                    <input id="rating14" type="radio" name="rating1" value="4">
+                                                    <label for="rating14">4</label>
+                                                    <input id="rating13" type="radio" name="rating1" value="3">
+                                                    <label for="rating13">3</label>
+                                                    <input id="rating12" type="radio" name="rating1" value="2">
+                                                    <label for="rating12">2</label>
+                                                    <input id="rating11" type="radio" name="rating1" value="1">
+                                                    <label for="rating11">1</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <!-- <td>Lorem ipsum dolor</td> -->
+                                    </tr>
+                                    <tr>
+                                        <!-- <th scope="row">2</th> -->
+                                        <td>Job fair was helpful.</td>
+                                        <td>
+                                            <div class="wrapper">
+                                                <span class="rating">
+                                                    <input id="rating25" type="radio" name="rating2" value="5">
+                                                    <label for="rating25">5</label>
+                                                    <input id="rating24" type="radio" name="rating2" value="4">
+                                                    <label for="rating24">4</label>
+                                                    <input id="rating23" type="radio" name="rating2" value="3">
+                                                    <label for="rating23">3</label>
+                                                    <input id="rating22" type="radio" name="rating2" value="2">
+                                                    <label for="rating22">2</label>
+                                                    <input id="rating21" type="radio" name="rating2" value="1">
+                                                    <label for="rating21">1</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <!-- <td>Lorem ipsum dolor</td> -->
+                                    </tr>
+                                    <tr>
+                                        <!-- <th scope="row">3</th> -->
+                                        <td>You got the experience from the job fair.</td>
+                                        <td>
+                                            <div class="wrapper">
+                                                <span class="rating">
+                                                    <input id="rating35" type="radio" name="rating3" value="5">
+                                                    <label for="rating35">5</label>
+                                                    <input id="rating34" type="radio" name="rating3" value="4">
+                                                    <label for="rating34">4</label>
+                                                    <input id="rating33" type="radio" name="rating3" value="3">
+                                                    <label for="rating33">3</label>
+                                                    <input id="rating32" type="radio" name="rating3" value="2">
+                                                    <label for="rating32">2</label>
+                                                    <input id="rating31" type="radio" name="rating3" value="1">
+                                                    <label for="rating31">1</label>
+                                                </span>
+                                            </div>
+                                        </td>
+                                        <!-- <td>Lorem ipsum dolor</td> -->
+                                    </tr>
+                                </tbody>
+                                <!--Table body-->
+
+                            </table>
+
+                        </div>
+
+                        <div class="form-group">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th class="th-lg"><span class="star">*</span> Please answer these questions.
+                                        </th>
+
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">In thinking about the IT Job
+                                                    Fair & Conference event, please tell us what worked well?</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">What would you improve?</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">What would you change?</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <div class="submitButton text-center">
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+
+
+        <!-- FOOTER -->
+        <footer id="footer" class="container"></footer>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#header').load("../php/header.php");
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#footer').load("../php/footer.php");
+        });
+    </script>
+    <script>
+        
+        $(document).ready(function () {
+            $('#submit').click(function (e) {
+                var isValid = true;
+                $('textarea').each(function () {
+                    if ($.trim($(this).val()) == '') {
+                        isValid = false;
+                        $(this).css({
+                            "border": "1px solid red",
+                            "background": "#FFCECE"
+                        });
+                    }
+                    else {
+                        $(this).css({
+                            "border": "",
+                            "background": ""
+                        });
+                    }
+                });
+                
+                if (!isValid == false || $("input").is(':checked'))
+                    alert('Thank you for submitting');
+                else
+                    
+                e.preventDefault();
+
+            });
+
+        });
+
+    </script>
+</body>
+
+</html>

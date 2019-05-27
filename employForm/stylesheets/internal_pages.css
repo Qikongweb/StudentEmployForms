@@ -1,0 +1,19 @@
+/* TABLE FONT SIZE */
+.table-condensed{
+    font-size: 13px;
+}
+/* BUTTONS ON THE LEFT SIDE */
+.margin-bottom{
+    margin-bottom: 10rem;
+}
+/* SMALL 'EDIT' BUTTONS */
+.btn-group-xs > .btn, .btn-xs {
+    padding: .25rem .4rem;
+    font-size: .875rem;
+    line-height: .5;
+    border-radius: .2rem;
+}
+/* CARD WIDTH WITHIN 'EDIT ...' PHP PAGES*/
+.card-custom-width {
+    width: 50rem !important;
+}

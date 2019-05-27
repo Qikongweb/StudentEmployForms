@@ -1,0 +1,165 @@
+/*CSS for Navigation Bar */
+
+.navBar {
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+}
+
+/*******************************************************************************/
+
+/* CSS for any Header text */
+
+/* Brief Summary Header */
+.briefSummaryHeader {
+    font-family: "Helvetica Neue";
+}
+
+/* Job Information table Header */
+.jobInfoHeader {
+    font-family: "Helvetica Neue";
+    font-size: 30px;
+}
+
+/* Attendance table Header */
+.attendanceHeader {
+    font-family: "Helvetica Neue";
+    font-size: 30px;
+}
+
+/* Job Position Header */
+.jobPositionHeader {
+    margin-bottom: 20px;
+    font-family: "Helvetica Neue";
+    font-size: 30px;
+}
+
+/* Employee table Header */
+.employerHeader {
+    margin-top: 44px;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+}
+
+/* Presenters table header */
+.presentersHeader {
+    margin-top: 45px;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+}
+
+/* Job Type table header */
+h4.jobTypeHeader {
+    margin-top: 25px;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+}
+
+/* Paid table header */
+h4.paidHeader {
+    margin-top: 46px;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+}
+
+/* Is Graduating table Header */
+h4.isGraduatingHeader {
+    margin-top: 36px;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+}
+
+/*******************************************************************************/
+
+/* CSS for the Tables */
+
+/* Job Fair Info Table */
+.jobInfoTable {
+    margin-top: 10px;
+}
+
+/* Student Table */
+.studentTable {
+    margin-top: 20px;
+}
+
+/* Employer Table */
+.employerTable {
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+/* Presenters table */
+.presentersTable {
+    margin-top: 20px;
+    width: 60%;
+    margin-left: 80px;
+}
+
+/* Paid table */
+.paidTable {
+    margin-top: 30px;
+    left: 30px;
+}
+
+/* Is Graduating table */
+.isGraduatingTable {
+    margin-top: 40px;
+    left: 40px;
+}
+
+/* Job Type Table */
+
+.jobTypeTable {
+    margin-top: 15px;
+
+}
+
+.jobTypeTable .jobTypeRows {
+    border-color: black;
+}
+
+/* Add borders to the Job Fair Info table */
+.jobInfoTable .jobInfoRows {
+    border-color: black;
+}
+
+/* Add borders to the student table */
+.studentTable .studentRows {
+    border-color: black;
+}
+
+/* Add borders to the employer table */
+.employerTable .employerRows {
+    border-color: black;
+}
+
+/* Add borders to the Presenters table */
+.presentersTable .presentersRows {
+    border-color: black;
+}
+
+/* Add borders to the Job Type table */
+.jobTypeTable .jobTypeRows {
+    border-color: black;
+}
+
+/* Add borders to the Paid table */
+.paidTable .paidRows {
+    border-color: black;
+}
+
+/* Add borders to the Is Graduating table */
+.isGraduatingTable .isGraduatingRows {
+    border-color: black;
+}
+
+/*******************************************************************************/
+
+/* CSS for the Footer */
+
+.main-footer {
+    font-size: 18px;
+    font-family: "Helvetica Neue";
+    width: 80px;
+
+}

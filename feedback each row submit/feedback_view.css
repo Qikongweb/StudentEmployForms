@@ -1,0 +1,87 @@
+main {
+    margin-top: 70px;
+    clear: both;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+.feedbackform {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+table {
+    border: 1px;
+}
+
+.star {
+    color: red;
+}
+
+/* .wrapper {
+        padding: 20px;
+        margin: 100px auto;
+        width: 400px;
+        min-height: 200px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,.1);
+        background-color: #fff;
+    } */
+.rating {
+    overflow: hidden;
+    vertical-align: bottom;
+    display: inline-block;
+    width: auto;
+    height: 40px;
+}
+
+.rating > input {
+    opacity: 0;
+    margin-right: -100%;
+}
+
+.rating > label {
+    position: relative;
+    display: block;
+    float: right;
+    background: url('../images/star-off-big.png');
+    background-size: 40px 40px;
+}
+
+.rating > label:before {
+    display: block;
+    opacity: 0;
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: url('../images/star-on-big.png');
+    background-size: 40px 40px;
+    transition: opacity 0.2s linear;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating:not(:hover) > :checked ~ label:before {
+    opacity: 1;
+}
+.color_header{
+    background-color: #214365;
+    color: white;
+    background: #A8C0D8 -webkit-gradient(linear, right top, right bottom, from(#214365), to(#A8C0D8)) no-repeat;
+    /*Mozilla,Firefox/Gecko */
+    background: #A8C0D8 -moz-linear-gradient(top, #214365, #A8C0D8) no-repeat;
+}

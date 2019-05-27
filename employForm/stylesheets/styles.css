@@ -1,0 +1,346 @@
+.navbar {
+    min-height: 80px;
+    border-bottom: #9E9E9E   1px solid;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.img-logo {
+    max-height: 70px;
+    max-width: 96px;
+}
+
+.navbar-toggle {
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+.nav-item {
+    font-size: 20px;
+    margin: auto;
+}
+
+.nav-link {
+    color: #000000 !important;
+}
+
+.nav-link:hover {
+    color: #ff5a00 !important;
+}
+
+.navbar-toggler-bd {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: #ff5a00;
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255,90,0)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.dropdown-item {
+    font-size: 20px;
+}
+
+.collapse-right {
+    width: 100px;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.carousel-first {
+    background-image: url("../images/carousel_first.jpg");
+    background-size: cover;
+    background-position: 0% 60%;
+}
+
+.carousel-second {
+    background-image: url("../images/carousel_second.jpg");
+    background-size: cover;
+    background-position: 0% 60%;
+}
+
+.carousel-contact {
+    background-image: url("../images/carousel_contact.jpg");
+    background-size: cover;
+    background-position: 0% 40%;
+}
+
+.carousel-faqstudent {
+    background-image: url("../images/carousel_faq_student.jpg");
+    background-size: cover;
+    background-position: 0% 25%;
+}
+
+.carousel-howtoprepare {
+    background-image: url("../images/carousel_how_to_prepare.jpg");
+    background-size: cover;
+    background-position: 0% 15%;
+}
+
+.carousel-eventinformation {
+    background-image: url("../images/carousel_event_information.jpg");
+    background-size: cover;
+    background-position: 0% 35%;
+}
+
+.carousel-essntialinformation {
+    background-image: url("../images/carousel_essntial_information.jpg");
+    background-size: cover;
+    background-position: 0% 35%;
+}
+
+.carousel-previousparticipants {
+    background-image: url("../images/carousel_previous_participants.jpg");
+    background-size: cover;
+    background-position: 0% 0%;
+}
+
+.carousel-faqemployer {
+    background-image: url("../images/carousel_faq_employer.jpg");
+    background-size: cover;
+    background-position: 0% 50%;
+}
+
+.index-card-first {
+    background-image: url("../images/index_card_first.jpg");
+    background-size: cover;
+}
+
+.index-card-second {
+    background-image: url("../images/index_card_second.jpg");
+    background-size: cover;
+}
+
+.index-card-third {
+    background-image: url("../images/index_card_third.jpg");
+    background-size: cover;
+}
+
+.index-featurette-first {
+    background-image: url("../images/index_featurette_first.jpg");
+    background-size: 100% 100%;
+}
+
+.index-featurette-second {
+    background-image: url("../images/index_featurette_second.jpg");
+    background-size: 100% 100%;
+}
+
+
+.index-featurette-third {
+    background-image: url("../images/index_featurette_third.jpg");
+    background-size: 100% 100%;
+}
+
+.featurette-eventinformation {
+    background-image: url("../images/featurette_event_information.jpg");
+    background-size: cover;
+    background-position: 50%;
+}
+
+.contact-map {
+    background-image: url("../images/nscc_it_map.jpg");
+    background-size: cover;
+    background-position: 50%;
+}
+
+
+.text-border {
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
+
+.box {
+    background-position: center center;
+    background-size: cover;
+    border: 1px solid #fff;
+    transition: opacity .25s;
+    overflow: hidden;
+}
+
+#boxOne,
+#boxTwo,
+#boxSeven,
+#boxEight {
+    height: 300px;
+}
+
+#boxThree,
+#boxFour,
+#boxFive,
+#boxSix {
+    height: 150px;
+}
+
+#boxOne {
+    background-image: url('/images/participant_shiftkey.jpg');
+}
+
+#boxEight {
+    background-image: url('/images/participant_nspower.jpg');
+}
+
+#boxTwo {
+    background-image: url('/images/participant_ibm.jpg');
+}
+
+#boxSeven {
+    background-image: url('/images/participant_maplewave.jpg');
+}
+
+#boxThree {
+    background-image: url('/images/participant_lockheed.jpg');
+}
+
+#boxSix {
+    background-image: url('/images/participant_room.jpg');
+}
+
+#boxFour {
+    background-image: url('/images/participant_bell.jpg');
+}
+
+#boxFive {
+    background-image: url('/images/participant_cgi.jpg');
+}
+
+@media (max-width: 340px) {
+    nav > a {
+        margin-right: 0px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        margin-left: 0px!important;
+        padding: 0px;
+    }
+    .img-logo {
+        width: 80%;
+    }
+    .carousel-item {
+        height: 400px;
+    }
+    .carousel-text {
+        font-size: 2em;
+    }
+}
+
+@media (min-width: 576px) {
+    .img-logo {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 576px) {
+    .card-img-top {
+        height: 400px;
+    }
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-first {
+        background-position: 30% 60%;
+    }
+
+    .carousel-second {
+        background-position: 45% 60%;
+    }
+
+    .carousel-contact {
+        background-position: 50% 40%;
+    }
+
+    .carousel-faq {
+        background-position: 20% 0%;
+    }
+
+    .carousel-howtoprepare {
+        background-position: 30% 0%;
+    }
+
+    .carousel-eventinformation {
+        background-position: 40% 0%;
+    }
+
+    .carousel-previousparticipants {
+        background-position: 40% 10%;
+    }
+    
+    .carousel-faqemployer {
+        background-position: 50% 0%;
+    }
+
+    #gridGallery {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .img-logo {
+        width: 100%;
+    }
+    .navbar-nav > li > a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 26.5px;
+        padding-bottom: 26.5px;
+        line-height: 27px;
+    }
+}
+
+@media screen and (max-width: 1400px) and (min-width: 992px) {
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .btn-login {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media (min-width: 1500px) {
+
+}
+
+.btn-orange {
+    color: #fff;
+    background-color: #ff5a00;
+    border-color: #ff5a00;
+}
+
+.btn-outline-orange {
+    color: #ff5a00;
+    border-color: #ff5a00;
+}
+.btn-outline-orange:hover {
+    background-color: #ff5a00;
+    color: #ffffff;
+}

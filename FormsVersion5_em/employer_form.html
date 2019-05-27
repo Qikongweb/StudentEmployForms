@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../stylesheets/bootstrap.css">
+    <link href="../../stylesheets/carousel.css" rel="stylesheet">
+    <link href="../../stylesheets/styles.css" rel="stylesheet">
+    <link href="../../stylesheets/form_reg.css" rel="stylesheet">
+
+    <title>NSCC Job Fair Website</title>
+</head>
+
+<body>
+    <header id="header"></header>
+
+    <main role="main">
+        <!-- Marketing messaging and featurettes
+    ================================================== -->
+        <!-- Wrap the rest of the page in another container to center all the content. -->
+
+        <div class="container marketing" style="margin-top:100px">
+            <!-- Form  -->
+            <!-- Form  -->
+            <div class="modal-content col-md-10">
+                <div class="modal-header">
+                    <h3><strong>Employer Registration</strong></h3>
+                </div>
+                <div class="modal-body p">
+                    Nova Scotia Community College values your privacy and will only ask for information that we
+                    need.<br>
+                    Nova Scotia Community College will not distribute your contact information outside of the
+                    institution
+                    without your permission. <br>
+
+                    <i><strong>If you want to update your information, please contact administration. <a
+                                href="mailto: abc@example.com">admin@nscc.ca</a></strong></i>
+                </div>
+
+                <!--Form-->
+
+                <form name="employerForm" method="post" action="" onsubmit="return validateform()" id="employerForm"
+                    data-parsley-validate="">
+                    <!-- Company information -->
+                    <div class="card employerForm mb-5">
+                        <div class="card-header">
+                            <h5 class="card-title">Company Information (<span class="req"><small> required
+                                        <span class="star">*</span></small></span>)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="companyName">Company Name <span class="star">*</span></label>
+                                <input type="text" class="form-control" id="companyName" name="companyName"
+                                    placeholder="">
+                                <small id="nameHelp" class="form-text text-muted"><br></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyEmail">Email address <span class="star">*</span></label>
+                                <input type="text" class="form-control" id="companyEmail" name="companyEmail"
+                                    placeholder="">
+                                <small id="emailHelp" class="form-text text-muted"><br></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyPhone">Phone Number <span class="star">*</span></label>
+                                <input type="text" class="form-control" id="companyPhone" name="companyPhone"
+                                    placeholder="">
+                                <small id="phoneHelp" class="form-text text-muted"><i>eg. 902-xxx-xxxx</i></small>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyURL">Company Website URL</label>
+                                <input type="text" class="form-control" id="companyURL" name="companyURL"
+                                    placeholder="">
+                                <small id="urlHelp" class="form-text text-muted"><br></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="companyAddress">Address <span class="star">*</span></label>
+                                <input type="text" class="form-control" id="companyAddress" name="companyAddress"
+                                    placeholder="">
+                                <small id="addressHelp" class="form-text text-muted"><br></small>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="companyCity">City <span class="star">*</span></label>
+                                    <input type="text" class="form-control" id="companyCity" name="companyCity"
+                                        placeholder="Halifax">
+                                    <small id="cityHelp" class="form-text text-muted"><br></small>
+                                </div>
+
+                                <div class="form-group col-md-4">
+                                    <label for="companyProvince">Province <span class="star">*</span></label>
+                                    <select id="companyProvince" name="companyProvince" class="form-control">
+                                        <option>AB</option>
+                                        <option>BC</option>
+                                        <option>MB</option>
+                                        <option>NB</option>
+                                        <option>NL</option>
+                                        <option>NT</option>
+                                        <option selected>NS</option>
+                                        <option>NU</option>
+                                        <option>ON</option>
+                                        <option>PE</option>
+                                        <option>QC</option>
+                                        <option>SK</option>
+                                        <option>YT</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="companyZip">Post Code <span class="star">*</span></label>
+                                    <input type="text" class="form-control" id="companyZip" name="companyZip"
+                                        placeholder="B3H 1E2">
+                                    <small id="zipHelp" class="form-text text-muted"><br></small>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recruit Information -->
+                    <div class="card employerForm mb-5">
+                        <div class="card-header">
+                            <h5 class="card-title">Recruit Information</h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- New contents Hiring Information-->
+
+                            <div class="field">
+                                <div class="field0">
+                                    <!-- Job title input-->
+                                    <div class="form-group row">
+                                        <label class="col-md-6 control-label" for="job_title[]">Job title:</label>
+                                        <div class="col-md-6">
+                                            <input id="job_title" name="job_title[]" type="text" placeholder=""
+                                                class="form-control input-md">
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Number of position input-->
+                                    <div class="form-group row">
+                                        <label class="col-md-6 control-label" for="number_student[]">Number of
+                                            person:</label>
+                                        <div class="col-md-6">
+                                            <input id="number_student" name="number_student[]" type="text"
+                                                placeholder="" class="form-control input-md">
+
+                                        </div>
+                                    </div>
+                                    <!-- Job type-->
+                                    <div class="form-group row">
+                                        <label class="col-md-6 control-label" for="job_type[]">Job
+                                            type:</label>
+                                        <div class="col-md-6">
+                                            <select id="job_type" name="job_type[]" class="form-control">
+                                                <option selected>Select</option>
+                                                <option>Full-time</option>
+                                                <option>Part-time</option>
+                                                <option>Coop</option>
+                                                <option>Workterm</option>
+                                                <option>Permanent</option>
+                                                <option>Contract</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Student year-->
+                                    <div class="form-group row">
+                                        <label class="col-md-6 control-label" for="student_year[]">Student
+                                            preferred:</label>
+                                        <div class="col-md-6">
+                                            <select name="student_year[]" class="form-control">
+                                                <option selected>Select</option>
+                                                <option>1st Year</option>
+                                                <option>Graduating student</option>
+                                                <option>Alumni</option>
+                                                <option>No preference</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Job pay-->
+                                    <div class="form-group row ">
+                                        <label class="col-md-6 control-label" for="pay_job[]">Pay for this
+                                            job:</label>
+                                        <div class="col-md-6">
+                                            <select name="pay_job[]" class="form-control">
+                                                <option selected>Select</option>
+                                                <option>Yes</option>
+                                                <option>No</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!-- Job description-->
+                                    <div class="form-group row">
+                                        <label class="col-md-6 control-label" for="job_description[]">Job
+                                            description:</label>
+                                        <div class="col-md-6">
+                                            <textarea class="form-control" id="job_description" name="job_description[]"
+                                                rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                            <!-- Button -->
+                            <div class="form-group row add_job_button">
+                                <div class="col-md-4">
+                                    <button id="add_job" name="add_job" class="btn btn-primary">Add another
+                                        job title</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Rerepresentative  information -->
+                    <div class="card employerForm mb-5">
+                        <div class="card-header">
+                            <h5 class="card-title">Representative Information (<span class="req"><small> required
+                                        <span class="star">*</span></small></span>)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="representative_field">
+                                <div class="representative_field0">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_firstname[]">First Name <span
+                                                    class="star">*</span></label>
+                                            <input type="text" class="form-control" name="representative_firstname[]"
+                                                placeholder="">
+                                        </div>
+
+
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_lastname[]">Last Name <span
+                                                    class="star">*</span></label>
+                                            <input type="text" class="form-control" name="representative_lastname[]"
+                                                placeholder="">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_email[]">Email <span
+                                                    class="star">*</span></label>
+                                            <input type="text" class="form-control" name="representative_email[]"
+                                                placeholder="">
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_phone[]">Phone Number </label>
+                                            <input type="text" class="form-control" name="representative_phone[]"
+                                                placeholder="">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="is_contact_person" class="contact_person"
+                                            name="contact_person[]">
+                                        <label class="form-check-label" for="contact_person[]">
+                                            This person is in charge of contact.
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="form-check">
+                                        <input class="form-check-input presatation_choose[] presatation" type="checkbox" value="give_presentation"
+                                            name="presatation_choose[]">
+                                        <label class="form-check-label" for="presatation_choose[]">
+                                            Would you like to give a presentation at Job Fair?
+                                        </label>
+                                        <div class="hidePresatationInfo">
+
+                                            <div class="form-group">
+                                                <br>
+                                                    <span class="star">*</span></label>
+                                                <select class="custom-select col-md-3" name="presatationDuringHour[]">
+                                                    <option selected>Choose</option>
+                                                    <option value="30min">30 Minute</option>
+                                                    <option value="60min">60 Minute</option>
+                                                    <option value="90min">90 Minute</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="presatationTopic[]">What is your topic? <span
+                                                        class="star">*</span></label>
+                                                <textarea class="form-control" name="presatationTopic[]"
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="representative_field_copy d-none">
+                                <div class="representative_field0_copy">
+
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_firstname[]">First Name <span
+                                                    class="star">*</span></label>
+                                            <input type="text" class="form-control representative_firstname" name=""
+                                                placeholder="">
+                                        </div>
+
+
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_lastname[]">Last Name <span
+                                                    class="star">*</span></label>
+                                            <input type="text" class="form-control representative_lastname" name=""
+                                                placeholder="">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_email[]">Email <span
+                                                    class="star">*</span></label>
+                                            <input type="text" class="form-control representative_email" name=""
+                                                placeholder="">
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="representative_phone[]">Phone Number </label>
+                                            <input type="text" class="form-control representative_phone" name=""
+                                                placeholder="">
+                                        </div>
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="is_contact_person" class="contact_person"
+                                            name="">
+                                        <label class="form-check-label" for="contact_person[]">
+                                            This person is in charge of contact.
+                                        </label>
+                                    </div>
+                                    <br>
+                                    <div class="form-check">
+                                        <input class="form-check-input presatation_choose presatation" type="checkbox" value="give_presentation"
+                                            name="">
+                                        <label class="form-check-label" for="presatation_choose[]">
+                                            Would you like to give a presentation at Job Fair?
+                                        </label>
+                                        <div class="hidePresatationInfo">
+
+                                            <div class="form-group">
+                                                <br>
+                                                <label for="presatationDuringHour[]">How long will your presentation
+                                                    take?
+                                                    <span class="star">*</span></label>
+                                                <select class="custom-select col-md-3 presatationDuringHour" name="">
+                                                    <option selected>Choose</option>
+                                                    <option value="30min">30 Minute</option>
+                                                    <option value="60min">60 Minute</option>
+                                                    <option value="90min">90 Minute</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="presatationTopic[]">What is your topic? <span
+                                                        class="star">*</span></label>
+                                                <textarea class="form-control presatationTopic" name=""
+                                                    rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="form-group row add_representative_button">
+                                <div class="col-md-4">
+                                    <br>
+                                    <button id="add_representative" name="add_job" class="btn btn-primary">Add another
+                                        person</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="agreeCheckBox"
+                            name="agreeCheckBox">
+                        <label class="form-check-label" for="agreeCheckBox">
+                            I agree with the <span class="termCondition"><a href="">terms and
+                                    conditions</a></span> for Registration. <span class="star">*</span>
+                        </label>
+                    </div>
+                    <div class="submitButton text-center">
+                        <button type="submit" class="btn btn-primary" id="submit">Submit Registration</button>
+                    </div>
+                    <!-- <button type="submit" class="btn btn-primary btn-block">Create your account</button> -->
+                    <!-- </fieldset> -->
+                </form>
+
+            </div>
+            <!-- </div> -->
+            <hr class="featurette-divider">
+
+        </div><!-- /.container -->
+
+
+        <!-- FOOTER -->
+        <footer id="footer" class="container"></footer>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="../../scripts/form_validation_employer.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#header').load("../php/header.php");
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#footer').load("../php/footer.php");
+        });
+    </script>
+</body>
+
+</html>
